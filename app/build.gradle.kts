@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -30,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -72,4 +75,47 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
+    //Room
+    implementation("androidx.room:room-ktx:2.4.3")
+    implementation("androidx.room:room-runtime:2.4.3")
+    kapt("androidx.room:room-compiler:2.4.3")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0-alpha01")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.0-alpha01")
+
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    //moshi
+    implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+
+    //dagger hilt
+    implementation("com.google.dagger:hilt-android:2.39.1")
+    kapt("com.google.dagger:hilt-compiler:2.39.1")
+
+    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2")
+
+    //kotlin Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    // android ktx
+    implementation("androidx.activity:activity-ktx:1.5.1")
+
+    //hilt viewmodel
+    //implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+
+    //pager
+    implementation("com.google.accompanist:accompanist-pager:0.25.0")
+    implementation("com.google.accompanist:accompanist-pager-indicators:0.25.0")
+
+    //navigation
+    implementation("androidx.navigation:navigation-compose:2.5.1")
+
+
+
 }
