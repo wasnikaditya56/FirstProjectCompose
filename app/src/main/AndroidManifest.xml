@@ -16,7 +16,7 @@
         android:theme="@style/Theme.FirstProjectCompose"
         tools:targetApi="31">
         <activity
-            android:name=".states.StatesActivity"
+            android:name=".navigation.NavigationActivity"
             android:exported="true"
             android:theme="@style/Theme.FirstProjectCompose" >
             <intent-filter>
@@ -36,6 +36,8 @@
         <activity android:name=".RecyclerviewActivity"></activity>
         <activity android:name=".retrofit.ui.RetrofitActivity"></activity>
         <activity android:name=".todo.ui.TodoActivity"></activity>
+        <activity android:name=".navigation.navigation.AnotherActivity"></activity>
+        <activity android:name=".states.StatesActivity"></activity>
     </application>
 
 </manifest>
