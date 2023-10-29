@@ -8,7 +8,9 @@ import androidx.compose.material.Surface
 import androidx.compose.material.*
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.rememberCoroutineScope
+import com.aditya.wasnik.firstprojectcompose.components.screen.CheckBoxUi
 import com.aditya.wasnik.firstprojectcompose.components.screen.ColumnScreen
+import com.aditya.wasnik.firstprojectcompose.components.screen.CustomToggleButton
 import com.aditya.wasnik.firstprojectcompose.ui.theme.FirstProjectComposeTheme
 
 class ComposeActivity : ComponentActivity() {
@@ -20,7 +22,7 @@ class ComposeActivity : ComponentActivity() {
                 Surface {
                    val scaffoldState = rememberScaffoldState()
                    val scope = rememberCoroutineScope()
-                    ColumnScreen()
+                    CustomToggleButton()
                 }
             }
         }
